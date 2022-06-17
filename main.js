@@ -6,6 +6,7 @@ const invalid2 = [5, 7, 9, 5, 5, 9, 3, 3, 9, 2, 1, 3, 4, 6, 4, 3];
 
 let input = document.getElementById('input');
 let button = document.getElementById('button');
+let output = document.getElementById('output');
 
 let tester = () => {
   let str = input.value;
@@ -33,8 +34,10 @@ function validateCred() {
   }
     if(total % 10 === 0){
     console.log('valid')
+    output.innerHTML = 'Valid - Credit Card Number'
   }else {
     console.log('invalid')
+    output.innerHTML = 'Invalid - Credit Card Number'
   }
   return total % 10 === 0;
 }
